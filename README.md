@@ -26,7 +26,7 @@
 
 ## index.jsp
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/lecture1/document_img/Homecontroller1_index.PNG?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/lecture1/document_img/index_jsp.PNG?raw=true)
 
 ## 결과
 
