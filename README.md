@@ -1,11 +1,5 @@
 # Get방식 & Post방식
 
-* [1. RequestMapping에서의 Get방식&Post방식](#Get방식Post방식)
-* [2. Get방식](#Get방식url매핑)
-* [3. Post방식](#Post방식url매핑)
-
-
-
 <hr/>
 
 <br/>
