@@ -1,9 +1,3 @@
-# Get방식 & Post방식
-
-<hr/>
-
-<br/>
-<br/>
 
 # Get방식Post방식
 - RequestMapping에서의 Get방식&Post방식을 사용가능
