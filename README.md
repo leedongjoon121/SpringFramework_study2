@@ -49,3 +49,21 @@
 
 ## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/lecture2/document_img/1_createDonePage_jsp.PNG?raw=true)
 
+<br/>
+
+## Form => createPage.jsp
+
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/lecture2/document_img/1_result_form.PNG?raw=true)
+
+<br/>
+
+## Data => createDonePage.jsp
+
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/lecture2/document_img/1_result_data.PNG?raw=true)
+
+
+<br/>
+
+## Error => console 확인
+
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/lecture2/document_img/1_result_error.PNG?raw=true)
