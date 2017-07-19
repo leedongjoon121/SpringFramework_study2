@@ -88,49 +88,54 @@
 ## DTO
 - 데이터 구조 셋팅, 각종 getter,setter 메서드
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/DTO.PNG?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/BDto.PNG?raw=true)
 
 <br/>
 
 
 ## DAO
-- Oracle DB Connection 설정
 - 각종 글쓰기, 수정, 삭제, 댓글 등의 해당 메서드
 - 각종 sql 쿼리문
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/DAO.PNG?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/BDao.PNG?raw=true)
 
 <br/>
 
+## 기존 버전1과 비교
+- 코드의 양이 많이 간소화됨
+
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/theory3.PNG?raw=true)
+
+<br/>
+
+## JDBC template을 효율적으로 사용하기 위한 클래스
+- template이 필요한 곳에 할당
+
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/Constant.PNG?raw=true)
+
+<br/>
 
 ## MainController
+- JDBC Template을 추가 하였고, @Autowired를 통해 자동으로 빈을 생성해서 dataSource 할당
 - @RequestMapping을 통해 url 매핑
 - 각종 Command 객체 구현 및 Model 구현 (request 활용)   
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/controller.PNG?raw=true)
-
-<br/>
-
-## ListCommand
-- 글의 List를 모두 보여주는 Command
-
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/List_command.PNG?raw=true)
-
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/Main_Controller.PNG?raw=true)
 
 <br/>
 
 ## WriteCommnad
-- 글을 작성하는 Command
+- 글을 작성하는 Command (버전1과 유사)
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/write_command.PNG?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/BWriteCommand.PNG?raw=true)
 
 
 <br/>
 
-## List View(list.jsp)
-- 모든 글의 list를 보여주는 view
+## DeleteCommand
+- 글을 삭제하는 Command(버전1과 유사)
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/list_jsp.PNG?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/BDeleteCommand.PNG?raw=true)
 
 
 <br/>
@@ -138,21 +143,21 @@
 # 결과
 
 ## list
-- 사용자별 번호,이름,제목,날짜,조회수 등을 확인할 수있다.
+- 사용자별 번호,이름,제목,날짜,조회수 등을 확인할 수있다. (버전1과 유사)
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/list_view.PNG?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/result_list.PNG?raw=true)
 
 <br/>
 
 ## write 
-- 사용자별 제목,이름,내용 등을 작성할 수있다.
+- 사용자별 제목,이름,내용 등을 작성할 수있다. (버전1과 유사)
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/write.PNG?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/result_write.PNG?raw=true)
 
 <br/>
 
 ## modify
-- 사용자가 작성한 글을 수정,삭제, 답변 할수있다.
+- 사용자가 작성한 글을 수정,삭제, 답변 할수있다. (버전1과 유사)
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/modify.PNG?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/result_modify.PNG?raw=true)
 
