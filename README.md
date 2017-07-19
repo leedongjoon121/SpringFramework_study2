@@ -1,5 +1,7 @@
 ##  스프링 프레임워크 스터디2
 ### <a href = "https://github.com/leedongjoon121/SpringFramework_study">스프링프레임워크 스터디1</a>의 upgrade version 입니다.
+- spring-jdbc를 이용하여 기존의 버전보다 반복되는 코드를 줄였습니다.
+- 프로젝트의 개념이 아닌 스프링 프레임워크를 학습한 내용을 정리한 것입니다.
 
 ### name :  Dongjoonlee 
 ### nation : south korea
@@ -38,35 +40,43 @@
 
 # 프로젝트구조
 
-> 클라이언트로 부터 요청이오면 Dispatcher가 해당 요청을 MainController에게 넘기고 MainController는 각각의 세부적인
-  컨트롤러에 명령을 할당 DAO를 통해 글쓰기,내용확인,수정,삭제,댓글 등의 기능을 수행하기 위한 DB Connection 및 SQL 쿼리문을 전송
-   
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/architecture.PNG?raw=true)
+> 기존의 버전1은 DAO객체를 이용해 쿼리를 날릴때 마다 매번 같은 동작을 반복해서 사용했습니다.
+  (드라이버로드,커넥션 및 DB연결,쿼리,자원해제)
+- 이런 반복적인 작업을 Spring-jdbc기반의 jdbcTemplate을 구현하여 간단하게 처리
+
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/theory1.PNG?raw=true)
 
 <br/>
+
+# Spring빈을 이용해 코드 간소화
+- spring 설정 파일에서 jdbctemplate 빈을 만들어서 datasource 빈을 만들고 내가 필요한 java파일에서 가져다 쓰는 원리
+- 특히, DAO클래스가 많이 줄어들게 된다.
+
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/theory2.PNG?raw=true)
 
 # 프로젝트디렉터리
 - Controller 및 DAO, DTO, 각종 view로 구성
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/directory1.PNG?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/directory1.PNG?raw=true)
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/directory2.PNG?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/directory2.PNG?raw=true)
 
 <br/>
 
 # 환경설정
 ## pom.xml
 - 오라클 JDBC 드라이버를 가져오기 위해 리포지토리를 추가 및, 오라클 jdbc드라이버 dependency 추가
+- jdbc 디펜던시를 추가 해서 spring jdbc를 사용한다.
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/pom_xml.PNG?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/pom_xml.PNG?raw=true)
 
 <br/>
 
-## Server : context.xml
-- Oracle DB와 연동하기 위해 Resource 추가
-- Server context는 보안상 업로드 하지 않았다 => 각자 본인의 Server 환경을 설정해주면된다
+## DataBase에 접근하기 위해 dataSource빈을 구현 : servlet-context.xml
+- jdbc 드라이버 클래스추가, url 추가, username & password추가
+- jdbc Template빈 생성 => dataSource 참조
 
-## ![사진](https://github.com/leedongjoon121/SpringFramework_study/blob/master/document_img/server_context_xml.png?raw=true)
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/master/document_img/servlet-context.PNG?raw=true)
 
 <br/>
 
