@@ -1,4 +1,4 @@
-##  스프링 프레임워크 스터디2
+#  스프링 프레임워크 스터디2
 ### <a href = "https://github.com/leedongjoon121/SpringFramework_study">스프링프레임워크 스터디1</a>의 upgrade version 입니다.
 - spring-jdbc를 이용하여 기존의 버전보다 반복되는 코드를 줄였습니다.
 - 프로젝트의 개념이 아닌 스프링 프레임워크를 학습한 내용을 정리한 것입니다.
@@ -26,6 +26,8 @@
 - Server : Tomcat 7.0
 - Oracle JDBC driver 
 
+## 목차
+
 * [1. 프로젝트구조](#프로젝트구조)
 * [2. 프로젝트디렉터리](#프로젝트디렉터리)
 * [3. 환경설정](#환경설정)
@@ -48,7 +50,7 @@
 
 <br/>
 
-# Spring빈을 이용해 코드 간소화
+## Spring빈을 이용해 코드 간소화
 - spring 설정 파일에서 jdbctemplate 빈을 만들어서 datasource 빈을 만들고 내가 필요한 java파일에서 가져다 쓰는 원리
 - 특히, DAO클래스가 많이 줄어들게 된다.
 
