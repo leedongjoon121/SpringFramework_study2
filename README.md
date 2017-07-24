@@ -2,6 +2,7 @@
 ### <a href = "https://github.com/leedongjoon121/SpringFramework_study">스프링프레임워크 스터디1</a>의 upgrade version 입니다.
 - spring-jdbc를 이용하여 기존의 버전보다 반복되는 코드를 줄였습니다.
 - 프로젝트의 개념이 아닌 스프링 프레임워크를 학습한 내용을 정리한 것입니다.
+- Mabatis를 이용한 간단한 CRUD <a href = "https://github.com/leedongjoon121/SpringFramework_study2/tree/mabatis">예제</a> 도 있습니다.
 
 ### name :  Dongjoonlee 
 ### nation : south korea
