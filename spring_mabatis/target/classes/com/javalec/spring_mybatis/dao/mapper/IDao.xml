@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- sql 쿼리문을 생성 -->
+<mapper namespace="com.javalec.spring_mybatis.dao.IDao">
+   <!-- 각 태그의 id는 IDao.java 의 메소드 명임!! -->
+   <!-- IDao에 있는 인터페이스들을 호출해서 사용 -->
+   
+    <!-- resultType : 반환값으로써 IDao의 메서드 타입과 일치시켜야한다. 위치값은 com.javalec.spring_mybatis.dto 아래의 ContentDto-->
+	<select id="listDao" resultType="com.javalec.spring_mybatis.dto.ContentDto">
+		SELECT * FROM BOARD ORDER BY MID DESC
+	</select>
+	
+	<!-- insert는 값을 넣기만 하는 거니깐 따로 반환값이 없어서, resultType이 필요 없음  -->
+	<insert id="writeDao">
+	 <!-- 자바코드는 preparedStatement로 ?,? 를 이용해서 값을 셋팅하지만, xml은 #{parm1} 을 이용해서 값을 할당 
+               # 또는 $를 이용할 수있는데, #은 int,string을 컬럼에 맞춰서 변환해줌
+               $는 데이터 컬럼에 상관 없이 온값 그대로 넣어짐	    
+	    -->
+		INSERT INTO BOARD (MID, MWRITER, MCONTENT) VALUES (BOARD_SEQ.NEXTVAL, #{param1}, #{param2})
+	</insert>
+	
+	<!-- delete는 값을 넣기만 하는 거니깐 따로 반환값이 없어서, resultType이 필요 없음  -->
+	<delete id="deleteDao">
+		DELETE FROM BOARD WHERE MID = #{param1}
+	</delete>
+	
+	
+</mapper>
