@@ -2,6 +2,10 @@
 - Mabatis를 이용하여 간단하게 데이터를 CRUD할 수 있다.
 - 데이터베이스에 접근 할때 복잡한 커넥션 과정이 많이 감소 되고 Mabatis가 알아서 처리해줌
 
+<br/>
+
+<hr/>
+
 ## 마이바티스를 사용하려면
 
 ### 1. Mabatis 라이브러리를 다운받는다. 
@@ -65,6 +69,7 @@
 ## HomeController1
 
 ## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/mabatis/document_img/HomeController1_java.PNG?raw=true)
+
 - 기존의 전역 DAO 객체를 이용하지 않는다.
 - SqlSession 객체를 정의하여 servlet-context.xml에서 정의한 사항을 매핑
 - @Autowired를 사용하기 때문에 별도의 setter 메서드가 필요없다.
@@ -78,6 +83,16 @@
 
 ## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/mabatis/document_img/HomeController2_java.PNG?raw=true)
 
+## Result => list확인
 
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/mabatis/document_img/Result1.PNG?raw=true)
+
+<br/>
+
+## Result => 글 작성 확인
+
+## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/mabatis/document_img/Result2.PNG?raw=true)
+
+<br/>
 
 
