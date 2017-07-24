@@ -29,10 +29,13 @@
 	    <!-- jdbc 드라이버 클래스  -->
 		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<!-- url 추가 : oracle 설정 방식에 맞추어..! 기존에 Server 환결설정 : context.xml에서 Resource 추가 했던거  -->
-		<beans:property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<beans:property name="url" value="" />
 		<!-- username과 password를 설정 -->
-		<beans:property name="username" value="dongjoon" />
-		<beans:property name="password" value="8903203" />
+		<beans:property name="username" value="" />
+		<beans:property name="password" value="" />
+		
+		<!-- username과 password 및 url 값을 본인의  서버 환경에 맞추어 할당해준다 -->
+		
 	</beans:bean>
 	
 <!-- 	<beans:bean name="template" class="org.springframework.jdbc.core.JdbcTemplate">
