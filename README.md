@@ -45,7 +45,7 @@
 <br/>
 
 ## xml 파일 생성 (쿼리문) 
-- sql 쿼리문을 생성 => <select> , <insert> , <delete> 태그문을 이용해 생성
+- sql 쿼리문을 생성 => select , insert , delete 태그문을 이용해 생성
 - 값에 접근할 때는 #{param1} 의 규격으로 접근
 
 ## ![사진](https://github.com/leedongjoon121/SpringFramework_study2/blob/mabatis/document_img/IDao_xml.PNG?raw=true)
